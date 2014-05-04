@@ -7,12 +7,19 @@
  
 </head>
 <body>
+
+<input id="caminhoPorUrl" type="text" > <button type="button" onclick="carregarImagemPorUrl();" >Por URL</button>
+
 <input 
       id="inputImagem" onchange="teste()"  type="file" accept="image/*"/>
  
+ <button type="button" onclick="aumentarImagem();" > + </button>
+ <button type="button" onclick="diminuirImagem();" > - </button>
+ 
 <div align="center">
 <img id="imagem" width="202" height="212" class="dragme">
-</div>
+</div> 
+ 
  
 <div class="dragme"><b>mova-me!!! please!!!</b><br />repare que eu estou por cima!!!!</div>
 </body>

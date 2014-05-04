@@ -60,6 +60,35 @@ function teste(){
 function onChangeImagem() {
     imagemSaida.src = reader.result;
 }
+
+function aumentarImagem(){ 
+    imagemSaida.height=imagemSaida.height*1.4; 
+    imagemSaida.width=imagemSaida.width*1.4; 
+}
+
+function diminuirImagem(){ 
+    imagemSaida.height=imagemSaida.height/1.4; 
+    imagemSaida.width=imagemSaida.width/1.4; 
+}
+
+function carregarImagemPorUrl(){
+  alert('oi');
+  
+  var caminhoUrl = document.getElementById('caminhoPorUrl');
+  
+  var reader2 = new FileReader();
+  
+  reader2.onloadend = function(){
+    imagemSaida.src = reader2.result;
+  };
+
+  if (caminhoUrl) {
+    reader.readAsDataURL(caminhoUrl);
+  } else {
+    imagemSaida.src = "";
+  }
+  
+}
  
 document.onmousedown=selectmouse;
 document.onmouseup=new Function("isdrag=false");
