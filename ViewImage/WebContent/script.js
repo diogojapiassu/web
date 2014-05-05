@@ -45,7 +45,7 @@ function selectmouse(e)
  
 }
 
-function teste(){
+function carregarImagemDoComputador(){
   var fileInput = document.getElementById('inputImagem');
   //imagemSaida = document.getElementById('imagem');
   var files = fileInput.files;
