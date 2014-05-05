@@ -6,7 +6,12 @@ var nn6=document.getElementById&&!document.all;
 var isdrag=false;
 var x,y;
 var dobj;
+
  
+window.onload = function(){
+	imagemSaida = document.getElementById('imagem');
+};
+
 function movemouse(e)
 {
   if (isdrag)
@@ -42,7 +47,7 @@ function selectmouse(e)
 
 function teste(){
   var fileInput = document.getElementById('inputImagem');
-  imagemSaida = document.getElementById('imagem');
+  //imagemSaida = document.getElementById('imagem');
   var files = fileInput.files;
   
   reader = new FileReader();
@@ -50,7 +55,16 @@ function teste(){
   reader.onloadend = onChangeImagem;
 
   if (files[0]) {
-    reader.readAsDataURL(files[0]);
+    var extensaoArquivo = files[0].name.split("\.")[1];
+    
+    if(extensaoArquivo != 'jpg' &&  extensaoArquivo != 'jpeg'){
+    	fileInput.value = null;
+    	imagemSaida.src = "";
+    	alert("Formato inválido!");
+    	return;
+    }
+	  
+	  reader.readAsDataURL(files[0]);
   } else {
     imagemSaida.src = "";
   }
@@ -72,18 +86,22 @@ function diminuirImagem(){
 }
 
 function carregarImagemPorUrl(){
-  alert('oi');
+	var fileInput = document.getElementById('inputImagem');
+	fileInput.value = null;
+	var caminhoUrl = document.getElementById('caminhoPorUrl');
+  //imagemSaida = document.getElementById('imagem');
+  //alert(caminhoUrl);
   
-  var caminhoUrl = document.getElementById('caminhoPorUrl');
-  
-  var reader2 = new FileReader();
+  /*var reader2 = new FileReader();
   
   reader2.onloadend = function(){
     imagemSaida.src = reader2.result;
-  };
+  };*/
+  
+ 
 
-  if (caminhoUrl) {
-    reader.readAsDataURL(caminhoUrl);
+  if (caminhoUrl.value != "") {
+	  imagemSaida.src = caminhoUrl.value;
   } else {
     imagemSaida.src = "";
   }
