@@ -1,43 +1,39 @@
 <html>
 <head>
-  <meta charset="utf-8">
- <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 
- 
+
 </head>
 <body>
 
-<input 
-      id="inputImagem" 
-      onchange="carregarImagemDoComputador()" 
-      type="file" 
-      accept="image/jpeg"
-      
- />
- 
- <br>
- <br>
- <br>
- 
- Zoom: 
- <button type="button" onclick="aumentarImagem();" > + </button>
- <button type="button" onclick="diminuirImagem();" > - </button>
+	Escolha o arquivo da imagem ou escolha a URL da imagem:
+	
+	<br>
+	<br>
 
-<br>
-<br>
-<br>
- 
- <input id="caminhoPorUrl" type="text" > 
-<button type="button" onclick="carregarImagemPorUrl();" >Por URL</button>
- 
-<div align="center">
-<img id="imagem" width="202" height="212" class="dragme">
-</div> 
- 
- 
-<!--div class="dragme">
-	<b>mova-me!!! please!!!</b><br />repare que eu estou por cima!!!!
-</div-->
+	<input id="inputImagem" onchange="carregarImagemDoComputador()"
+		type="file" accept="image/jpeg" />
+
+	<br>
+	<br>
+
+	<button type="button" onclick="carregarImagemPorUrl();">Escolher URL</button>
+	<input id="caminhoPorUrl" type="text">
+	
+	<br>
+	<br>
+	<br> 
+	<br> 
+	Zoom:
+	<button type="button" onclick="aumentarImagem();">+</button>
+	<button type="button" onclick="diminuirImagem();">-</button>
+	
+
+	<div align="center">
+		<img id="imagem" width="202" height="212" class="movimento">
+	</div>
+
 </body>
 </html>
