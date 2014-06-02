@@ -13,13 +13,25 @@
     <![endif]-->
     <script>
 
+	    var _gaq = _gaq || [];
+	    _gaq.push(['_setAccount', 'UA-23019901-1']);
+	    _gaq.push(['_setDomainName', "bootswatch.com"]);
+	      _gaq.push(['_setAllowLinker', true]);
+	    _gaq.push(['_trackPageview']);
+	
+	   (function() {
+	     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	   })();
+    
     </script>
   </head>
   <body>
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="../" class="navbar-brand">Menu</a>
+          <a class="navbar-brand">Menu</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -28,7 +40,7 @@
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav">
-            <li class="dropdown">
+            <!--li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="themes">
                 <li><a href="../default/">Default</a></li>
@@ -49,17 +61,17 @@
                 <li><a href="../united/">United</a></li>
                 <li><a href="../yeti/">Yeti</a></li>
               </ul>
-            </li>
-            <li>
+            </li-->
+            <!--li>
               <a href="../help/">Help</a>
             </li>
             <li>
               <a href="http://news.bootswatch.com">Blog</a>
-            </li>
+            </li-->
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Download <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="./bootstrap.min.css">bootstrap.min.css</a></li>
+                <li><a href="https://play.google.com/store" target="_blank">No Google Play</a></li>
                 <li><a href="./bootstrap.css">bootstrap.css</a></li>
                 <li class="divider"></li>
                 <li><a href="./variables.less">variables.less</a></li>
@@ -69,8 +81,8 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
-            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+            <li><a href="http://www.inf.ufg.br/" target="_blank">Sobre o INF</a></li>
+            <li><a href="http://www.ufg.br/" target="_blank">Sobre a UFG</a></li>
           </ul>
 
         </div>
@@ -128,7 +140,7 @@
 
       <!-- Navbar
       ================================================== -->
-      <div class="bs-docs-section clearfix">
+      <!--div class="bs-docs-section clearfix">
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header">
@@ -227,16 +239,16 @@
                   </ul>
                 </div>
               </div>
-            </div><!-- /example -->
+            </div>
 
           </div>
         </div>
-      </div>
+      </div-->
 
 
       <!-- Buttons
       ================================================== -->
-      <div class="bs-docs-section">
+      <!--div class="bs-docs-section">
         <div class="page-header">
           <div class="row">
             <div class="col-lg-12">
@@ -399,7 +411,7 @@
 
           </div>
         </div>
-      </div>
+      </div-->
 
       <!-- Typography
       ================================================== -->
@@ -407,7 +419,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header">
-              <h1 id="type">Typography</h1>
+              <h1 id="type">Entendendo as configurações</h1>
             </div>
           </div>
         </div>
@@ -415,7 +427,7 @@
         <!-- Headings -->
 
         <div class="row">
-          <div class="col-lg-4">
+          <!--div class="col-lg-4">
             <div class="bs-component">
               <h1>Heading 1</h1>
               <h2>Heading 2</h2>
@@ -425,18 +437,38 @@
               <h6>Heading 6</h6>
               <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
             </div>
-          </div>
+          </div-->
+          
           <div class="col-lg-4">
             <div class="bs-component">
-              <h2>Example body text</h2>
-              <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-              <p><small>This line of text is meant to be treated as fine print.</small></p>
+              <h2>Mensagens por disciplina</h2>
+              <p>As mensagens são separadas por tipos, e podem ser configuradas pelo Painel de Controle</p>
+              <p>Pode-se escolher, por exemplo, exibir mensagens somente de determinadas disciplinas, de acordo
+              com o interesse do usuário </p>
+              
+              
+              <!--p><small>This line of text is meant to be treated as fine print.</small></p>
               <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
               <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-              <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+              <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p-->
             </div>
-
           </div>
+          
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <h2>Mensagens públicas</h2>
+              <p>Quem não tem acesso ao sistema pelo Aplicativo também pode acompanhar as mensagens
+               que são enviadas de forma pública.</p>
+              <p>As mensagens são abertas para toda comunidade, e informam, por exemplo, datas de vestibulares 
+              e demais eventos.</p>
+              
+              <!--p><small>This line of text is meant to be treated as fine print.</small></p>
+              <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+              <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+              <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p-->
+            </div>
+          </div>
+          
           <div class="col-lg-4">
             <div class="bs-component">
               <h2>Emphasis classes</h2>
@@ -480,7 +512,8 @@
 
       <!-- Tables
       ================================================== -->
-      <div class="bs-docs-section">
+      <!--div class="bs-docs-section">
+      
 
         <div class="row">
           <div class="col-lg-12">
@@ -543,14 +576,14 @@
                   </tr>
                 </tbody>
               </table> 
-            </div><!-- /example -->
+            </div>
           </div>
         </div>
-      </div>
+      </div-->
 
       <!-- Forms
       ================================================== -->
-      <div class="bs-docs-section">
+      <!--div class="bs-docs-section">
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header">
@@ -693,11 +726,11 @@
 
           </div>
         </div>
-      </div>
+      </div-->
 
       <!-- Navs
       ================================================== -->
-      <div class="bs-docs-section">
+      <!--div class="bs-docs-section">
 
         <div class="row">
           <div class="col-lg-12">
@@ -858,11 +891,11 @@
 
           </div>
         </div>
-      </div>
+      </div-->
 
       <!-- Indicators
       ================================================== -->
-      <div class="bs-docs-section">
+      <!--div class="bs-docs-section">
 
         <div class="row">
           <div class="col-lg-12">
@@ -933,11 +966,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </div-->
 
       <!-- Progress bars
       ================================================== -->
-      <div class="bs-docs-section">
+      <!--div class="bs-docs-section">
 
         <div class="row">
           <div class="col-lg-12">
@@ -1007,11 +1040,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </div-->
 
       <!-- Containers
       ================================================== -->
-      <div class="bs-docs-section">
+      <!--div class="bs-docs-section">
 
         <div class="row">
           <div class="col-lg-12">
@@ -1193,11 +1226,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </div-->
 
       <!-- Dialogs
       ================================================== -->
-      <div class="bs-docs-section">
+      <!--div class="bs-docs-section">
 
         <div class="row">
           <div class="col-lg-12">
@@ -1289,14 +1322,15 @@
           </div>
         </div>
 
-      </footer>
+      </footer-->
 
 
+    </div>
     </div>
 
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../assets/js/bootswatch.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootswatch.js"></script>
   </body>
 </html>
