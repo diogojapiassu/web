@@ -12,7 +12,7 @@
 
   $(".bs-component").hover(function(){
     $(this).append($button);
-    $button.show();
+    $button.hide();
   }, function(){
     $button.hide();
   });
