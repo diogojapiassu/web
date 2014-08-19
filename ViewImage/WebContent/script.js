@@ -92,3 +92,5 @@ function carregarImagemPorUrl() {
 
 document.onmousedown = selectmouse;
 document.onmouseup = new Function("isMovimentarImagem=false");
+
+//teste pull request douglas.japiassu
